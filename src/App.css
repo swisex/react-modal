@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+.shareInfoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.shareInfoWrapper > div {
+  margin-left: 10px; /* Adds some space between the icon and the text */
+}
+
+table {
+  color: #777; 
+}
+
+table tr {
+  border-bottom: 1px solid #ddd; 
+}
+
+.status-button {
+  color: "";
+  width: 100px;
+  height: 50px;
+}
+
+.page-button-style {
+  width: 30px;
+  height: 30px;
+  color: #33F; 
+  border: 1px solid lightgray; 
+  background-color: white;
+}
+
+.page-button-active {
+  background-color: skyblue;
+}
+
+.page-button-inactive {
+  background-color: white;
+}
+
+table {
+  border-spacing: 0 15px;
+  border-collapse: separate;
+}
+
+#modalButton {
+  width: 200px;
+  height: 50px;
+  margin: 30px;
+
+  border-radius: 25px;
+  border: none;
+
+  background-color: rgb(29, 138, 226);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}

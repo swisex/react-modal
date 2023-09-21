@@ -1,0 +1,184 @@
+[
+    {
+      "sharedTo": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      "sharedBy": {
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": false
+    },
+    {
+      "sharedTo": {
+        "name": "Mary Smith",
+        "email": "mary@example.com"
+      },
+      "sharedBy": {
+        "name": "Peter Johnson",
+        "email": "peter@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": false
+    },
+    {
+      "sharedTo": {
+        "name": "David Jones",
+        "email": "david@example.com"
+      },
+      "sharedBy": {
+        "name": "Susan Brown",
+        "email": "susan@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "status": "REVOKED",
+      "sharedFor": "1 day",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "David Jones",
+        "email": "david@example.com"
+      },
+      "sharedBy": {
+        "name": "Susan Brown",
+        "email": "susan@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "EXPIRED",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      "sharedBy": {
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "Mary Smith",
+        "email": "mary@example.com"
+      },
+      "sharedBy": {
+        "name": "Peter Johnson",
+        "email": "peter@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": false
+    },
+    {
+      "sharedTo": {
+        "name": "David Jones",
+        "email": "david@example.com"
+      },
+      "sharedBy": {
+        "name": "Susan Brown",
+        "email": "susan@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": false
+    },
+    {
+      "sharedTo": {
+        "name": "David Jones",
+        "email": "david@example.com"
+      },
+      "sharedBy": {
+        "name": "Susan Brown",
+        "email": "susan@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "REVOKED",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      "sharedBy": {
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 day",
+      "status": "ACTIVE",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "Mary Smith",
+        "email": "mary@example.com"
+      },
+      "sharedBy": {
+        "name": "Peter Johnson",
+        "email": "peter@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "EXPIRED",
+      "actions": false
+    },
+    {
+      "sharedTo": {
+        "name": "David Jones",
+        "email": "david@example.com"
+      },
+      "sharedBy": {
+        "name": "Susan Brown",
+        "email": "susan@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "REVOKED",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      "sharedBy": {
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": true
+    },
+    {
+      "sharedTo": {
+        "name": "Mary Smith",
+        "email": "mary@example.com"
+      },
+      "sharedBy": {
+        "name": "Peter Johnson",
+        "email": "peter@example.com"
+      },
+      "sharedOn": "2023-09-20T10:25:14.000Z",
+      "sharedFor": "1 week",
+      "status": "ACTIVE",
+      "actions": false
+    }
+  ]
