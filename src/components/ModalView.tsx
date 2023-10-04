@@ -1,45 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { IconButton, Button, Typography } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import PersonIcon from "@material-ui/icons/Person";
-
-interface ShareInfo {
-  sharedTo: { name: string; email: string };
-  sharedBy: { name: string; email: string };
-  sharedOn: Date;
-  sharedFor: string;
-  status: "EXPIRED" | "REVOKED" | "ACTIVE";
-  actions: boolean; // true for enabled, false for disabled
-}
-
-type StatusType = "EXPIRED" | "REVOKED" | "ACTIVE";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import {
+  StatusType,
+  fetchModalDataAsync,
+  selectModalData,
+  selectModalItemsPerPage,
+  selectModalPage,
+  setPage,
+} from "./modalReducer";
 
 export default function MadalView() {
-  const [data, setData] = useState<ShareInfo[]>([]); // Initialize state to an empty array
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 5;
+  const data = useAppSelector(selectModalData);
+  const page = useAppSelector(selectModalPage);
+  const itemsPerPage = useAppSelector(selectModalItemsPerPage);
+
+  const dispatch = useAppDispatch();
 
   const paginatedData = data.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
 
-  // Fetch data from the public folder
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + "/challenge4.sample.json")
-      .then((response) => response.json())
-      .then((jsonData) => {
-        jsonData = jsonData.map(
-          (item: { sharedOn: string | number | Date }) => ({
-            ...item,
-            sharedOn: new Date(item.sharedOn),
-          })
-        );
-
-        setData(jsonData);
-      })
-      .catch((error) => console.error("Error fetching data: ", error));
-  }, []); // Empty dependency array means this effect runs once on mount
+    async function fetchData() {
+      await dispatch(
+        fetchModalDataAsync(process.env.PUBLIC_URL + "/challenge4.sample.json")
+      );
+    }
+    fetchData();
+  }, [dispatch]);
 
   // Render status button
   const renderStatusButton = (status: StatusType) => {
@@ -163,14 +155,14 @@ export default function MadalView() {
         <button
           className="page-button-style"
           disabled={page === 1}
-          onClick={() => setPage(1)}
+          onClick={() => dispatch(setPage(1))}
         >
           {"<<"}
         </button>
         <button
           className="page-button-style"
           disabled={page === 1}
-          onClick={() => setPage(page - 1)}
+          onClick={() => dispatch(setPage(page - 1))}
         >
           {"<"}
         </button>
@@ -184,7 +176,7 @@ export default function MadalView() {
                   ? "page-button-active"
                   : "page-button-inactive"
               }`}
-              onClick={() => setPage(index + 1)}
+              onClick={() => dispatch(setPage(index + 1))}
             >
               {index + 1}
             </button>
@@ -192,14 +184,16 @@ export default function MadalView() {
         <button
           className="page-button-style"
           disabled={page === Math.ceil(data.length / itemsPerPage)}
-          onClick={() => setPage(page + 1)}
+          onClick={() => dispatch(setPage(page + 1))}
         >
           {">"}
         </button>
         <button
           className="page-button-style"
           disabled={page === Math.ceil(data.length / itemsPerPage)}
-          onClick={() => setPage(Math.ceil(data.length / itemsPerPage))}
+          onClick={() =>
+            dispatch(setPage(Math.ceil(data.length / itemsPerPage)))
+          }
         >
           {">>"}
         </button>
